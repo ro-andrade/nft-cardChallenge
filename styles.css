@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+* {
+    padding: 0;
+    border: 0;
+    margin: 0;
+}
+
+:root {
+    --bgColor: hsl(217, 54%, 11%);
+    --cardColor: hsl(216, 50%, 16%);
+    --lineColor: hsl(215, 32%, 27%);
+    --h2-spanColor: hsl(0, 0%, 100%);
+    --pColor: hsl(215, 51%, 70%);
+    --price-hoverColor: hsl(178, 100%, 50%);
+    --nftHover: hsla(178, 100%, 50%, 0.3);
+}
+
+body {
+    background-color: var(--bgColor);
+    font-family: 'Outfit', sans-serif;
+    max-height: 80%;
+}
+
+main {
+    margin: 1% 2% 50px 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background-color: var(--cardColor);
+    border-radius: 20px
+}
+
+.imgsDiv {
+    max-height: 288px;
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+.img1, .hoverNft {
+    height: 288px;
+    width: 288px;
+    border-radius: 0.8rem;
+    display: flex;
+    justify-content: center;
+    margin: 20px 20px 0 20px;
+}
+
+.img1 {
+    position: relative;
+    bottom: -2px;
+    z-index: 3;
+
+}
+
+.hoverNft {
+    position: relative;
+    top: -307px;
+    bottom: 2px;
+    left: 0;
+    border-radius: 0.8rem;
+    z-index: 1;
+    background-color: var(--nftHover);
+    cursor: pointer;
+    margin-top: 21px ;
+}
+
+.hoverNft > .img2 {
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    border-radius: 0.8rem;
+    z-index: 2;
+    top: 117px;
+}
+
+.img1:hover {
+    z-index: 0;
+    cursor: pointer;
+}
+
+
+.nftName, .description {
+    margin: 20px 20px 0 20px;
+}
+
+.priceTime {
+    margin: 30px 0 20px -15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.timeDiv {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    margin-left: 10px;
+}
+
+.clock {
+    margin-right: 5px;
+    width: 22px;
+    height: 22px;
+}
+
+.priceDiv {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    margin-left: 2.5px;
+    color: var(--price-hoverColor)
+}
+
+.ethIcon {
+    margin-right: 5px;
+}
+
+.line {
+    height: 0.2px;
+    margin: 20px;
+    background-color: var(--lineColor);
+}
+
+.creatorDiv {
+    margin: 0 0 20px 0;
+    width: fit-content;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.avatar {
+    border: 0.5px solid var(--lineColor);
+    border-radius: 100%;
+}
+
+.createdBy {
+    text-align: center; 
+}
+
+.createdBy, .avatar {
+    margin: 0 0 0 15px;
+}
+
+.description, .createdBy, .timeLeft {
+    color: var(--pColor)
+}
+
+.nftName, .creator {
+    color: var(--h2-spanColor);
+}
+
+.nftName:hover, .creator:hover {
+    color:var(--price-hoverColor);
+    cursor: pointer;
+}
+
+.nftName {
+    font-weight: 600;
+}
+
+.description {
+    font-size: 18px;
+}
+
+.description, .timeLeft, .createdBy {
+    font-weight: 300;
+    font-size: 18px;
+}
+
+.nftPrice {
+    font-weight: 400;
+}
+
+footer {
+    text-align: center;
+    color: var(--pColor);
+}
+
+footer >  a {
+    color: var(--h2-spanColor);
+}
+
+footer > a:hover, a:visited {
+    color: var(--price-hoverColor);
+}
+
+@media screen and (max-width: 375px) {
+    body {
+        min-width: 400px;
+    }
+}
